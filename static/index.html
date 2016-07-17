@@ -144,9 +144,9 @@ function create_map() {
         google.maps.event.removeListener(boundsListener);
     });
 
-    var boundsListener = google.maps.event.addListener((map), 'click', function(event) {
-        console.log(event);
-        handler(event.center);
+    google.maps.event.addListener(map, 'click', function(event) {
+        console.log(event.latLng);
+        handler(event.latLng)
     });
 
 }
