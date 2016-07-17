@@ -86,6 +86,7 @@ function build_map_update(location) {
 		},
 		error: function() {
 			console.log('Error while attempting to retrieve poke locations');
+            alert("Error");
 			setTimeout(function(){
 				navigator.geolocation.getCurrentPosition(handler);
 			}, 5000);
